@@ -11,35 +11,18 @@
   <meta property="og:image:type" content="image/jpeg">
   <meta property="twitter:card" content="summary_large_image">
 
-  <link rel="preload" href="photo.jpg" as="image">
   <style>
     html, body {
       height: 100%;
       margin: 0;
     }
     body {
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    img {
-      width: 300vw;       /* ширина = ширина экрана */
-      height: 300vh;      /* высота = высота экрана */
-      object-fit: cover;  /* картинка заполняет весь экран */
-      display: block;
-    }
-    .fallback {
-      position: fixed;
-      bottom: 12px;
-      opacity: .6;
-      font-size: 12px;
-      color: #fff;
+      /* делаем фото фоном страницы */
+      background: url("photo.jpg") no-repeat center center fixed;
+      background-size: cover;   /* заполняет экран, сохраняя пропорции */
     }
   </style>
 </head>
 <body>
-  <img src="photo.jpg" alt="Моя фотография" loading="eager" decoding="sync">
-  <div class="fallback" aria-hidden="true">Если изображение не загрузилось — обновите страницу</div>
 </body>
 </html>
