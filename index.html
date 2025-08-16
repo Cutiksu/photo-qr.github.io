@@ -25,11 +25,13 @@
       font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     }
     img {
-  
-      width: auto;
+      max-width: 100vw;   /* фото растянется по ширине экрана */
+      max-height: 100vh;  /* и по высоте экрана */
+      width: auto;        /* пропорции сохраняются */
       height: auto;
       object-fit: contain;
       image-rendering: auto;
+      display: block;
     }
     .fallback { position: fixed; bottom: 12px; opacity: .6; font-size: 12px; }
   </style>
